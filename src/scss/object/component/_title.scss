@@ -1,0 +1,22 @@
+.c-title {
+    h2 {
+        margin-bottom: 30px;
+
+        text-align: center;
+
+        @include fontPlayFair42bold();
+        color: $text-white;
+
+    }
+
+    p {
+        width: 550px;
+        margin: 0 auto;
+
+        text-align: center;
+
+        @include fontMuli16();
+        color: $text-white;
+
+    }
+}

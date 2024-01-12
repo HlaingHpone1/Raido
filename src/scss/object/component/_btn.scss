@@ -1,0 +1,51 @@
+.c-btn {
+    display: flex;
+
+    a {
+        width: 150px;
+        height: 50px;
+
+        text-decoration: none;
+
+        @include fontMuli16btn();
+        color: $primary-color;
+        background-color: $btn-color;
+
+        @include flexDesign();
+        justify-content: center;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+
+        font-size: 24px;
+        background-color: $btnSide-color;
+
+        cursor: pointer;
+
+        @include flexDesign();
+        justify-content: center;
+    }
+
+    &--discover {
+
+        color: $text-white;
+
+        a {
+            border: 1px solid $text-white;
+            border-right: 0;
+
+            color: $text-white;
+            background: none;
+        }
+
+        .icon {
+            border: 1px solid $text-white;
+            border-left: 0;
+
+            color: $text-white;
+            background: none;
+        }
+    }
+}

@@ -3,20 +3,30 @@
 @import 'normalize.css/normalize.css';
 
 /* ==========================================================================
-  Foundation
+  Start Foundation
 ========================================================================== */
 
-/* ==========================================================================
-  Foundation
-========================================================================== */
+@import "./foundation/font";
+@import "./foundation/setting";
+@import "./foundation/base";
+@import "./foundation/reset";
+
 
 /* ==========================================================================
   Project
 ========================================================================== */
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/layout";
 
 /* ==========================================================================
   Component
 ========================================================================== */
-h1 {
-  color: #f00;
-}
+@import "./object/component/btn";
+@import "./object/component/mobile-nav";
+@import "./object/component/title";
+
+@import "./object/project/mainvisual";
+@import "./object/project/top-about";
+@import "./object/project/top-travel";
+@import "./object/project/top-radio";

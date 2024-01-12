@@ -1,0 +1,104 @@
+$font-muli: 'Mulish', sans-serif;
+$font-nunito: 'Nunito', sans-serif;
+$font-playfair: 'Playfair Display', serif;
+$font-poppins: 'Poppins', sans-serif;
+
+
+$primary-color: #0a0d13;
+$btn-color: #F49F0A;
+$btnSide-color: #E89400;
+$card-color :#1F242E;
+
+$text-white: #fff;
+$text-black: #000;
+
+@mixin flexDesign() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexGap($gap1) {
+    gap: $gap1;
+}
+
+@mixin flexDirection($direction : row) {
+    flex-direction: $direction;
+}
+
+@mixin fontPlayFair42bold() {
+    line-height: 52px;
+
+    font-family: $font-playfair;
+    font-size: 42px;
+    font-weight: 700;
+}
+
+@mixin fontPlayFair42Regular() {
+    line-height: 52px;
+
+    font-family: $font-playfair;
+    font-size: 42px;
+    font-weight: 400;
+}
+
+@mixin fontPlayFair34() {
+    line-height: 44px;
+
+    font-family: $font-playfair;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+@mixin fontMuli14() {
+    line-height: 24px;
+
+    font-family: $font-muli;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+
+@mixin fontMuli16() {
+    line-height: 26px;
+
+    font-family: $font-muli;
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+@mixin fontMuli16btn() {
+    line-height: 26px;
+
+    font-family: $font-muli;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@mixin fontMuli18() {
+    line-height: 28px;
+
+    font-family: $font-muli;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@mixin fontMuli24() {
+    line-height: 24px;
+
+    font-family: $font-muli;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+@mixin fontNunito14() {
+    font-family: $font-nunito;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@mixin fontPoppins22() {
+    font-family: $font-poppins;
+    font-size: 22px;
+    font-weight: 700;
+}
