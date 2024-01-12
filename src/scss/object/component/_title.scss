@@ -4,9 +4,26 @@
 
         text-align: center;
 
+        transition: all 500ms ease;
+
         @include fontPlayFair42bold();
         color: $text-white;
 
+        @media screen and (max-width: 1200px) {
+            font-size: 39px;
+        }
+
+        @media screen and (max-width: 800px) {
+            font-size: 36px;
+        }
+
+        @media screen and (max-width: 600px) {
+            font-size: 32px;
+        }
+
+        @media screen and (max-width: 400px) {
+            font-size: 28px;
+        }
     }
 
     p {
@@ -15,8 +32,23 @@
 
         text-align: center;
 
+        transition: all 500ms ease;
+
         @include fontMuli16();
         color: $text-white;
 
+        @media screen and (max-width: 1200px) {
+            font-size: 14px;
+        }
+
+        @media screen and (max-width: 800px) {
+            width: 350px;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 250px;
+
+        }
     }
 }
