@@ -31,6 +31,18 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              // You can specify the directory where fonts will be saved
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      },
+      {
         test: /\.(css|scss)$/,
         use: [
           {
