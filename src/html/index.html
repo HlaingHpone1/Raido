@@ -21,16 +21,29 @@
                         </h1>
                         <nav class="l-header__list">
                             <ul>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
+                                <li>
+                                    <a class="active" href="#" target="_self"
+                                        >Home</a
+                                    >
+                                </li>
+                                <li><a href="#" target="_self">About Us</a></li>
+                                <li><a href="#" target="_self">Discover</a></li>
+                                <li><a href="#" target="_self">Blog</a></li>
+                                <li><a href="#" target="_self">Journals</a></li>
+                                <li><a href="#" target="_self">Gallery</a></li>
+                                <li><a href="#" target="_self">Contact</a></li>
+                                <li>
+                                    <a href="#" target="_self"
+                                        ><i
+                                            class="fa-solid fa-magnifying-glass"
+                                        ></i
+                                    ></a>
+                                </li>
                             </ul>
                         </nav>
+                        <button class="hamburger">
+                            <div class="bar"></div>
+                        </button>
                     </div>
                 </div>
             </header>
@@ -436,73 +449,68 @@
                                         world.
                                     </p>
                                 </div>
-                                <div class="silder">
-                                    <div class="right-arrow">
-                                        <i></i>
-                                    </div>
-                                    <div class="card">
-                                        <div class="gallery-img">
-                                            <img
-                                                src=""
-                                                alt="This is gallery image"
-                                            />
-                                        </div>
-                                        <div class="card__body">
-                                            <h3></h3>
-                                            <p></p>
+                                <div class="slider">
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio1.png"
+                                            alt="Image 1"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 1</h3>
+                                            <p>Subtitle 1</p>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="gallery-img">
-                                            <img
-                                                src=""
-                                                alt="This is gallery image"
-                                            />
-                                        </div>
-                                        <div class="card__body">
-                                            <h3></h3>
-                                            <p></p>
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio2.png"
+                                            alt="Image 2"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 2</h3>
+                                            <p>Subtitle 2</p>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="gallery-img">
-                                            <img
-                                                src=""
-                                                alt="This is gallery image"
-                                            />
-                                        </div>
-                                        <div class="card__body">
-                                            <h3></h3>
-                                            <p></p>
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio1.png"
+                                            alt="Image 1"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 1</h3>
+                                            <p>Subtitle 1</p>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="gallery-img">
-                                            <img
-                                                src=""
-                                                alt="This is gallery image"
-                                            />
-                                        </div>
-                                        <div class="card__body">
-                                            <h3></h3>
-                                            <p></p>
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio5.png"
+                                            alt="Image 2"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 3</h3>
+                                            <p>Subtitle 3</p>
                                         </div>
                                     </div>
-                                    <div class="card">
-                                        <div class="gallery-img">
-                                            <img
-                                                src=""
-                                                alt="This is gallery image"
-                                            />
-                                        </div>
-                                        <div class="card__body">
-                                            <h3></h3>
-                                            <p></p>
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio3.png"
+                                            alt="Image 2"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 4</h3>
+                                            <p>Subtitle 4</p>
                                         </div>
                                     </div>
-                                    <div class="left-arrow">
-                                        <i></i>
+                                    <div class="slider-item">
+                                        <img
+                                            src="../img/radio4.png"
+                                            alt="Image 2"
+                                        />
+                                        <div class="slider-text">
+                                            <h3>Title 5</h3>
+                                            <p>Subtitle 5</p>
+                                        </div>
                                     </div>
+                                    <!-- Repeat for other 3 cards -->
                                 </div>
                             </div>
                         </div>
@@ -529,26 +537,41 @@
             </main>
             <footer class="ft">
                 <div class="l-wrap-inner">
-                    <div class="ft-content">
-                        <div class="ft-logo">
+                    <div class="ft__content">
+                        <div class="ft__logo">
                             <a href="#" target="_self">Radio.</a>
                         </div>
-                        <div class="ft-social"></div>
-                        <p></p>
-                        <div class="ft-quick">
+                        <div class="ft__social">
+                            <a href=""
+                                ><i class="fa-brands fa-facebook-f"></i
+                            ></a>
+                            <a href=""
+                                ><i class="fa-brands fa-instagram"></i
+                            ></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""
+                                ><i class="fa-brands fa-linkedin-in"></i
+                            ></a>
+                        </div>
+                        <p>
+                            Cheap Romantic Vacations. Many people feel that
+                            there is a limited amount of abundance, wealth, or
+                            chances to succeed in life.
+                        </p>
+                        <div class="ft__quick">
                             <ul>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
-                                <li><a href="#" target="_self"></a></li>
+                                <li><a href="#" target="_self">Home</a></li>
+                                <li><a href="#" target="_self">About us</a></li>
+                                <li><a href="#" target="_self">Discover</a></li>
+                                <li><a href="#" target="_self">Blog</a></li>
+                                <li><a href="#" target="_self">Journals</a></li>
+                                <li><a href="#" target="_self">Gallery</a></li>
+                                <li><a href="#" target="_self">Contact</a></li>
                             </ul>
                         </div>
                     </div>
-                    <div class="ft-bottom">
-                        <address></address>
+                    <div class="ft__bottom">
+                        <address>&#169; 2022 All Right Reserved</address>
                     </div>
                 </div>
             </footer>

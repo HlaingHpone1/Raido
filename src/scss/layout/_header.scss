@@ -1,0 +1,122 @@
+.l-header {
+    width: 100%;
+
+    border-bottom: 1px solid #93a0a7;
+
+    position: fixed;
+    top: 0;
+    z-index: 999;
+
+    backdrop-filter: blur(10px) brightness(0.85);
+
+    &__menu {
+        height: 87px;
+
+        @include flexDesign();
+        justify-content: space-between;
+
+        @media (max-width: 990px) {
+            padding: 0 20px;
+        }
+
+        .hamburger {
+            padding: 15px;
+
+            position: relative;
+            display: block;
+            width: 60px;
+            cursor: pointer;
+
+            appearance: none;
+            outline: none;
+            border: none;
+
+            border-radius: 20px;
+            background: #fff;
+
+            .bar,
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: $text-black;
+                margin: 6px 0px;
+                transition: 0.4s;
+            }
+
+            &.is-active:before {
+                transform: translate(-2px, 8px) rotate(-45deg);
+            }
+
+            &.is-active:after {
+                transform: translate(0px, -10px) rotate(45deg);
+            }
+
+            &.is-active .bar {
+                opacity: 0;
+            }
+
+            @media (min-width: 990px) {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        a {
+            text-decoration: none;
+            @include fontPoppins22();
+
+            color: $text-white;
+        }
+    }
+
+    &__list {
+        @media (max-width: 990px) {
+            display: none;
+        }
+
+        ul {
+            @include flexDesign();
+            justify-content: center;
+            @include flexGap(50px);
+
+            li {
+                a {
+                    padding: 0 10px;
+                    text-decoration: none;
+                    @include fontMuli16Regular();
+
+                    color: $text-white;
+
+                    display: block;
+
+                    position: relative;
+
+                    &.active {
+                        color: $btn-color;
+                        font-weight: 700;
+
+                        &::after {
+                            content: "";
+
+                            width: 100%;
+                            height: 2px;
+
+                            background-color: $btn-color;
+
+                            position: absolute;
+                            bottom: -32px;
+                            right: 0;
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+    }
+}
