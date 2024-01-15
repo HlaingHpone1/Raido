@@ -5,9 +5,9 @@ $font-poppins: 'Poppins', sans-serif;
 
 
 $primary-color: #0a0d13;
-$btn-color: #F49F0A;
-$btnSide-color: #E89400;
-$card-color :#1F242E;
+$btn-color: #f49f0a;
+$btnSide-color: #e89400;
+$card-color :#1f242e;
 
 $text-white: #fff;
 $text-black: #000;
@@ -64,6 +64,15 @@ $text-black: #000;
     font-family: $font-muli;
     font-size: 16px;
     font-weight: 300;
+
+}
+
+@mixin fontMuli16Regular() {
+    line-height: 26px;
+
+    font-family: $font-muli;
+    font-size: 16px;
+    font-weight: 400;
 
 }
 

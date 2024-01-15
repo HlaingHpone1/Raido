@@ -1,0 +1,90 @@
+.mainvisual {
+    background-image: url('../img/bg1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+        width: 635px;
+        height: 900px;
+
+        display: flex;
+        @include flexDirection(column);
+        justify-content: center;
+
+        transition: all 500ms linear;
+
+        @media screen and (max-width: 1160px) {
+            padding: 0 25px;
+        }
+
+        @media screen and (max-width: 800px) {
+            width: 450px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 320px;
+        }
+
+        @media screen and (max-width: 450px) {
+            width: 280px;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 220px;
+        }
+
+        h2 {
+            margin-bottom: 12px;
+
+            line-height: 74px;
+
+            font-family: $font-playfair;
+            font-size: 64px;
+            font-weight: 700;
+
+            color: $text-white;
+
+            transition: all 500ms linear;
+
+            @media screen and (max-width: 800px) {
+                font-size: 58px;
+            }
+
+            @media screen and (max-width: 600px) {
+                font-size: 52px;
+            }
+
+            @media screen and (max-width: 400px) {
+                font-size: 45px;
+
+                line-height: 55px;
+            }
+        }
+
+
+        p {
+            padding-left: 60px;
+            margin-bottom: 60px;
+
+            color: $text-white;
+
+            position: relative;
+
+            &::before {
+                content: "";
+
+                width: 40px;
+                height: 2px;
+
+                background-color: $text-white;
+
+                position: absolute;
+                top: 50%;
+                left: 0;
+            }
+        }
+
+
+    }
+}
