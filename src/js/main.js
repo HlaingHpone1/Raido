@@ -23,6 +23,17 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $(document).ready(function(){
+    
+var maxHeight = 0;
+var $highestCard = null;
+$('.card').each(function() {
+        var thisHeight = $(this).height();
+        if (thisHeight > maxHeight) {
+            maxHeight = thisHeight;
+            $highestCard = $(this);
+        }
+    });
+    
     $('.slider').slick({
         centerMode: true,
         slidesToShow: 5,
