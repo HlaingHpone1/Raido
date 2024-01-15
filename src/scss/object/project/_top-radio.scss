@@ -24,6 +24,23 @@
                     background-size: cover;
                     background-clip: text;
 
+                    transition: all 500ms ease;
+
+                    @media screen and (max-width:900px) {
+                        font-size: 200px;
+                    }
+
+                    @media screen and (max-width:800px) {
+                        font-size: 175px;
+                    }
+
+                    @media screen and (max-width:600px) {
+                        font-size: 140px;
+                    }
+
+                    @media screen and (max-width:400px) {
+                        font-size: 100px;
+                    }
                 }
             }
 
