@@ -7,4 +7,15 @@ import '../scss/style.scss';
 import "@fortawesome/fontawesome-free/js/all.js";
 import "@fortawesome/fontawesome-free/css/all.css";
 
+$(document).ready(function() {
+    var maxHeight = 0;
+    var $highestCard = null;
 
+    $('.card').each(function() {
+        var thisHeight = $(this).height();
+        if (thisHeight > maxHeight) {
+            maxHeight = thisHeight;
+            $highestCard = $(this);
+        }
+    });
+});
