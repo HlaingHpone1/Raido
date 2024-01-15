@@ -200,6 +200,7 @@
                     h3 {
                         text-align: center;
                         @include fontPlayFair34();
+                        margin-bottom: 10px;
     
                         @media screen and (max-width:1000px) {
                         font-size: 30px;
@@ -210,6 +211,7 @@
                         color: $text-white;
                         text-decoration: none;
                         @include fontMuli24();
+                        margin-bottom: 10px;
     
                         @media screen and (max-width:1000px) {
                             font-size: 22px;
@@ -225,6 +227,7 @@
                     }
                     svg{
                         font-size: 30px;
+                        margin-bottom: 10px;
                     }
                 }
             }
