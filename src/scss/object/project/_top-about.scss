@@ -1,0 +1,371 @@
+.p-bloc {
+    &--about {
+        .about-container {
+            display: flex;
+
+            @media screen and (max-width: 800px) {
+                flex-direction: column-reverse;
+            }
+
+            .txt-box,
+            .img-box {
+                flex: 1;
+            }
+
+            .txt-box {
+                @include flexDesign();
+                justify-content: center;
+
+                &__inner {
+                    width: 475px;
+                    margin: 0 auto;
+
+                    position: relative;
+
+                    @media screen and (max-width: 900px) {
+                        width: 300px;
+                    }
+
+                    @media screen and (max-width: 800px) {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                    }
+
+                    &>h2 {
+                        @include fontPlayFair42bold;
+                        color: $text-white;
+                        padding-bottom: 30px;
+
+
+
+                        @media screen and (max-width: 800px) {
+                            font-size: 37px;
+                            text-align: center;
+                        }
+                    }
+                    &>p {
+                        width: 474px;
+                        height: 145px;
+                        @include fontMuli16;
+                        color: $text-white;
+
+                        @media screen and (max-width: 800px) {
+                            text-align: center;
+                            font-size: 14px;
+                        }
+
+                        @media screen and (max-width: 600px) {
+
+                            width: 300px;
+
+                            font-size: 13px;
+                        }
+
+                    }
+                }
+            }
+
+            .record-card {
+                display: flex;
+                justify-content: center;
+                @include flexGap(170px);
+                background-color: $card-color;
+                width: 835px;
+                height: 140px;
+                margin-bottom: 54px;
+
+                transition: all 500ms linear;
+
+                @media screen and (max-width: 1300px) {
+                    width: 700px;
+                }
+
+                @media screen and (max-width: 1200px) {
+                    width: 600px;
+
+                    @include flexGap(140px);
+
+                }
+
+                @media screen and (max-width: 900px) {
+                    width: 500px;
+
+                    @include flexGap(100px);
+
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: 390px;
+
+                    @include flexGap(40px);
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: 200px;
+                    height: 100%;
+                    flex-direction: column;
+                }
+                .info {
+                    @include flexDesign();
+                    justify-content: center;
+                    @include flexDirection(column);
+
+                    position: relative;
+
+                    &::after {
+                        content: "";
+
+                        width: 2px;
+                        height: 37px;
+
+                        border-radius: 10px;
+
+                        background-color: #2b313c;
+
+                        position: absolute;
+                        right: -80px;
+
+                        @media screen and (max-width: 1200px) {
+                            right: -70px;
+
+                        }
+
+                        @media screen and (max-width: 800px) {
+                            right: -50px;
+                        }
+
+                        @media screen and (max-width: 600px) {
+                            right: -25px;
+                        }
+
+                        @media screen and (max-width: 400px) {
+                            display: none;
+                        }
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+                    h2 {
+                        color: $text-white;
+                        @include fontPlayFair42Regular;
+
+                        @media screen and (max-width: 1200px) {
+                            font-size: 34px;
+                        }
+
+                        @media screen and (max-width: 800px) {
+                            font-size: 32px;
+                        }
+
+                        @media screen and (max-width: 800px) {
+                            font-size: 29px;
+                        }
+
+                        &+p {
+                            @include fontMuli18;
+                            color: $text-white;
+
+                            @media screen and (max-width: 1200px) {
+                                font-size: 15px;
+                            }
+
+                            @media screen and (max-width: 800px) {
+                                font-size: 13px;
+                            }
+
+                            @media screen and (max-width: 600px) {
+                                font-size: 11px;
+                            }
+                        }
+                    }
+                }
+            }
+            .img-box {
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &--discover {
+        .disc-container {
+            .disc-bloc {
+                margin-top: 60px;
+
+                display: flex;
+                justify-content: center;
+                @include flexGap(70px);
+                flex-wrap: wrap;
+
+                @media screen and (max-width: 1200px) {
+                    @include flexGap(50px);
+
+                }
+                @media screen and (max-width: 600px) {
+                    @include flexGap(30px);
+
+                }
+                .card {
+                    width: calc(100% / 3 - 70px);
+
+                    @media screen and (max-width: 800px) {
+                        width: calc(100% / 2 - 70px);
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        width: calc(100% / 1 - 70px);
+
+                    }
+                    &:nth-child(even) {
+                        margin-top: 60px;
+
+                        .dis-img {
+                            margin-bottom: 75px;
+
+                            @media screen and (max-width: 600px) {
+                                margin-bottom: 45px;
+                            }
+                        }
+                    }
+                    &__inner {
+                        .dis-img {
+
+                            position: relative;
+                            margin-bottom: 50px;
+
+                            @media screen and (max-width: 600px) {
+                                margin-bottom: 30px;
+                            }
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+
+                                object-fit: cover;
+                            }
+
+                            .txt-box {
+                                padding: 30px;
+                                padding-bottom: 0;
+
+                                position: absolute;
+                                bottom: -20px;
+
+                                @media screen and (max-width: 1200px) {
+                                    padding: 20px;
+                                }
+
+                                @media screen and (max-width: 600px) {
+                                    padding: 10px;
+                                }
+
+                                h3 {
+                                    color: $btn-color;
+                                    @include fontPlayFair34;
+
+                                    @media screen and (max-width: 1200px) {
+                                        font-size: 32px;
+                                    }
+
+                                    @media screen and (max-width: 600px) {
+                                        font-size: 28px;
+                                    }
+                                }
+
+                                p {
+                                    @include fontMuli16;
+                                    color: $text-white;
+
+                                    @media screen and (max-width: 1200px) {
+                                        font-size: 14px;
+                                    }
+
+                                    @media screen and (max-width: 600px) {
+                                        font-size: 11px;
+
+                                        line-height: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    &--latest {
+        .late-bloc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            .card {
+                position: relative;
+                width: calc(100% / 4);
+                transition: all 500ms linear;
+
+                @media screen and (max-width: 800px) {
+                    width: calc(100% / 3);
+                }
+
+                @media screen and (max-width: 600px) {
+                    width: calc(100% / 2);
+                }
+
+                @media screen and (max-width: 400px) {
+                    width: calc(100% / 1);
+                }
+                &__inner {
+                    .late-img {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            // object-fit:contain;
+                        }
+                    }
+                }
+                &__body {
+                    position: absolute;
+                    bottom: 11px;
+
+                    p {
+                        @include fontMuli18;
+                        color: $text-white;
+
+                        @media screen and (max-width: 1200px) {
+                            font-size: 17px;
+                            line-height: 27px;
+                        }
+
+
+                        @media screen and (max-width: 900px) {
+                            font-size: 16px;
+                            line-height: 26px;
+                        }
+
+                        @media screen and (max-width: 800px) {
+                            font-size: 15px;
+                            line-height: 25px;
+                        }
+
+                        // @media screen and (max-width: 400px) {
+                        //     font-size: 15px;
+                        //     line-height: 25px;
+                        //  }
+                    }
+                }
+            }
+        }
+    }
+}
