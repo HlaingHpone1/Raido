@@ -1,0 +1,51 @@
+.c-mobile-nav {
+    padding-top: 80px;
+
+    width: 320px;
+    height: 100%;
+
+    @include fontMuli16Regular();
+
+    background-color: $btn-color;
+
+    position: fixed;
+    top: 0;
+    right: -330px;
+    z-index: 98;
+
+    display: block;
+
+    transition: 0.4s;
+
+    &.is-active {
+        right: 0;
+    }
+
+    a {
+        padding: 12px 16px;
+        margin: 0 auto 10px;
+
+        width: 100%;
+        max-width: 200px;
+
+        text-align: center;
+        text-decoration: none;
+
+        color: $text-white;
+
+        display: block;
+
+    }
+
+    a.active {
+        color: #000;
+    }
+
+    a:hover {
+        color: #000;
+    }
+
+    @media (min-width: 990px) {
+        display: none;
+    }
+}
