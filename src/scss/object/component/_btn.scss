@@ -6,6 +6,8 @@
         height: 50px;
 
         text-decoration: none;
+        text-transform: capitalize;
+        letter-spacing: 1px;
 
         @include fontMuli16btn();
         color: $primary-color;
@@ -13,6 +15,8 @@
 
         @include flexDesign();
         justify-content: center;
+
+        transition: all 500ms linear;
 
     }
 
@@ -33,12 +37,26 @@
 
         color: $text-white;
 
+        @media screen and (max-width: 800px) {
+            justify-content: center;
+        }
+
         a {
             border: 1px solid $text-white;
             border-right: 0;
 
             color: $text-white;
             background: none;
+
+            @media screen and (max-width: 600px) {
+                width: 205px;
+
+                font-size: 14px;
+            }
+
+            @media screen and (max-width: 400px) {
+                width: 150px;
+            }
         }
 
         .icon {
@@ -47,6 +65,12 @@
 
             color: $text-white;
             background: none;
+
+            @media screen and (max-width: 600px) {
+
+                font-size: 18px;
+            }
         }
+
     }
 }

@@ -23,15 +23,25 @@ import $ from 'jquery';
 import 'slick-carousel';
 
 $(document).ready(function(){
+
+    function equalizeCardHeights() {
+        var maxHeight = 0;
     
-var maxHeight = 0;
-var $highestCard = null;
-$('.card').each(function() {
-        var thisHeight = $(this).height();
-        if (thisHeight > maxHeight) {
-            maxHeight = thisHeight;
-            $highestCard = $(this);
-        }
+        // Reset all cards to auto height to get the natural height
+        $('.tcard').height('auto');
+    
+        // Find the tallest card
+        $('.tcard').each(function() {
+            var thisHeight = $(this).outerHeight();
+            if (thisHeight > maxHeight) { maxHeight = thisHeight; }
+        });
+    
+        // Set all cards to the tallest height
+        $('.tcard').height(maxHeight);
+    }
+
+    $(window).resize(function() {
+        equalizeCardHeights();
     });
     
     $('.slider').slick({

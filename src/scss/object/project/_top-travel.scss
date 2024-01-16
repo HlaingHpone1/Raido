@@ -1,99 +1,113 @@
-.p-bloc{
+.p-bloc {
     &--travel {
-        .travel-container{
-            @include flexDesign();
-            @include flexDirection($direction : column);
-            
+        margin-bottom: 200px;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 120px;
         }
+
+        @media screen and (max-width: 400px) {
+            margin-bottom: 80px;
+        }
+
+        .travel-container {
+            @include flexDesign();
+            @include flexDirection(column);
+
+        }
+
         .travel-bloc {
             @include flexDesign();
             margin-bottom: 60px;
             justify-content: center;
             flex-wrap: wrap;
             @include flexGap(40px);
-    
+
             .card {
                 width: calc(100% / 3 - 40px);
                 background-color: $card-color;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-    
+
                 @media screen and (max-width: 800px) {
                     width: calc(100% / 2 - 40px);
                 }
-    
-                @media screen and (max-width: 400px){
+
+                @media screen and (max-width: 400px) {
                     width: calc(100% - 40px);
                 }
+
                 .tavel-img {
                     img {
                         width: 100%;
                         display: block;
                     }
                 }
-    
+
                 &__body {
                     .inner {
                         padding: 30px;
+
                         .user {
                             margin-bottom: 10px;
-                            
+
                             @include flexDesign();
                             @include flexGap(10px);
-    
+
                             p {
                                 margin: 0;
                                 @include fontMuli14();
                                 color: #dfdfdf;
-    
-                                @media screen and (max-width:600px){
+
+                                @media screen and (max-width:600px) {
                                     font-size: 13px;
                                 }
-    
-                                @media screen and (max-width:500px){
+
+                                @media screen and (max-width:500px) {
                                     font-size: 11px;
                                 }
-    
-                                @media screen and (max-width:400px){
+
+                                @media screen and (max-width:400px) {
                                     font-size: 11px;
                                 }
                             }
                         }
-    
+
                         p {
                             @include fontMuli18();
                             color: $text-white;
                             margin-bottom: 11px;
                             transition: 1s all ease;
-    
-                            @media screen and (max-width:900px){
+
+                            @media screen and (max-width:900px) {
                                 font-size: 17px;
                             }
-    
-                            @media  screen and (max-width:600px){
+
+                            @media screen and (max-width:600px) {
                                 font-size: 16px;
                             }
-                            @media screen and (max-width:500px){
+
+                            @media screen and (max-width:500px) {
                                 font-size: 13px;
                                 line-height: 23px;
                             }
                         }
-    
+
                         .status {
                             @include flexDesign();
                             justify-content: space-between;
-    
+
                             .date {
                                 transition: 1s all ease;
                                 @include fontMuli14();
                                 color: #757d8c;
-                                
-                                @media screen and (max-width:500px){
+
+                                @media screen and (max-width:500px) {
                                     font-size: 12px;
                                 }
                             }
-    
+
                             .share-icon {
                                 color: $text-white;
                             }
@@ -105,77 +119,82 @@
     }
 
     &--contact {
-        background: linear-gradient(180deg, rgba(31, 36, 46, 1), rgba(10, 13, 19, 0.5), rgba(31, 36, 46, 1));
-        
-        
+        background: linear-gradient(180deg, rgb(10, 13, 19), rgba(10, 13, 19, 0.5), rgb(31, 36, 46));
+
         .contact-container {
+
             @include flexDesign();
             justify-content: space-between;
             transition: 1s all ease;
             height: 478px;
-    
+
             @media screen and (max-width:900px) {
+                padding: 25px 0;
                 @include flexDirection($direction : column);
                 @include flexGap(30px);
             }
-    
+
             @media screen and (max-width:600px) {
                 height: 100%;
-                
+
             }
+
             .contact-info {
                 width: 335px;
-                
+
                 @media screen and (max-width: 400px) {
                     width: 300px;
-                    
+
                 }
+
                 h2 {
                     @include fontPlayFair34();
                     color: $text-white;
-    
+
                     @media screen and (max-width:1000px) {
                         font-size: 32px;
                     }
-    
-                    @media screen and (max-width:900px){
+
+                    @media screen and (max-width:900px) {
                         text-align: center;
                     }
                 }
-    
+
                 p {
                     @include fontMuli18();
                     color: $text-white;
-    
+
                     @media screen and (max-width:1000px) {
                         font-size: 16px;
                     }
-                    @media screen and (max-width:900px){
+
+                    @media screen and (max-width:900px) {
                         text-align: center;
                     }
                 }
             }
-    
+
             .contact-circles {
                 @include flexDesign();
                 @include flexGap(115px);
                 transition: 1s all ease;
-                
+
                 @media screen and (max-width:1200px) {
                     @include flexGap(100px);
                 }
-    
+
                 @media screen and(max-width:1100px) {
                     @include flexGap(80px);
                 }
-    
+
                 @media screen and(max-width:1000px) {
                     @include flexGap(60px);
                 }
-    
+
                 @media screen and(max-width:600px) {
                     @include flexDirection($direction : column);
                 }
+
                 .circle {
                     width: 280px;
                     height: 280px;
@@ -186,46 +205,47 @@
                     justify-content: center;
                     @include flexDirection($direction : column);
                     transition: 1s all ease;
-    
+
                     @media screen and (max-width:1100px) {
                         width: 260px;
                         height: 260px;
                     }
-    
+
                     @media screen and (max-width:1000px) {
                         width: 240px;
                         height: 240px;
                     }
-    
+
                     h3 {
                         text-align: center;
                         @include fontPlayFair34();
                         margin-bottom: 10px;
-    
+
                         @media screen and (max-width:1000px) {
-                        font-size: 30px;
+                            font-size: 30px;
                         }
                     }
-    
+
                     a {
                         color: $text-white;
                         text-decoration: none;
                         @include fontMuli24();
                         margin-bottom: 10px;
-    
+
                         @media screen and (max-width:1000px) {
                             font-size: 22px;
                         }
                     }
-    
+
                     p {
                         @include fontMuli16();
-    
+
                         @media screen and (max-width:1000px) {
                             font-size: 14px;
                         }
                     }
-                    svg{
+
+                    svg {
                         font-size: 30px;
                         margin-bottom: 10px;
                     }

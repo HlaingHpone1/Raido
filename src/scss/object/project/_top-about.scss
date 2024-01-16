@@ -1,5 +1,7 @@
 .p-bloc {
     &--about {
+        margin-bottom: 120px;
+
         .about-container {
             display: flex;
 
@@ -46,6 +48,7 @@
                             text-align: center;
                         }
                     }
+
                     &>p {
                         width: 474px;
                         height: 145px;
@@ -108,6 +111,7 @@
                     height: 100%;
                     flex-direction: column;
                 }
+
                 .info {
                     @include flexDesign();
                     justify-content: center;
@@ -149,6 +153,7 @@
                     &:last-child::after {
                         display: none;
                     }
+
                     h2 {
                         color: $text-white;
                         @include fontPlayFair42Regular;
@@ -184,6 +189,7 @@
                     }
                 }
             }
+
             .img-box {
                 img {
                     width: 100%;
@@ -197,6 +203,16 @@
     }
 
     &--discover {
+        margin-bottom: 200px;
+
+        transition: all 500ms linear;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 120px;
+        }
+
+
+
         .disc-container {
             .disc-bloc {
                 margin-top: 60px;
@@ -210,10 +226,12 @@
                     @include flexGap(50px);
 
                 }
+
                 @media screen and (max-width: 600px) {
                     @include flexGap(30px);
 
                 }
+
                 .card {
                     width: calc(100% / 3 - 70px);
 
@@ -225,17 +243,15 @@
                         width: calc(100% / 1 - 70px);
 
                     }
+
                     &:nth-child(even) {
                         margin-top: 60px;
 
-                        .dis-img {
-                            margin-bottom: 75px;
-
-                            @media screen and (max-width: 600px) {
-                                margin-bottom: 45px;
-                            }
+                        @media screen and (max-width: 800px) {
+                            margin: 0;
                         }
                     }
+
                     &__inner {
                         .dis-img {
 
@@ -272,12 +288,20 @@
                                     color: $btn-color;
                                     @include fontPlayFair34;
 
+                                    letter-spacing: 3px;
+
+                                    transition: all 500ms linear;
+
                                     @media screen and (max-width: 1200px) {
                                         font-size: 32px;
                                     }
 
                                     @media screen and (max-width: 600px) {
-                                        font-size: 28px;
+                                        font-size: 25px;
+                                    }
+
+                                    @media screen and (max-width: 400px) {
+                                        font-size: 35px;
                                     }
                                 }
 
@@ -285,14 +309,26 @@
                                     @include fontMuli16;
                                     color: $text-white;
 
+                                    transition: all 500ms linear;
+
                                     @media screen and (max-width: 1200px) {
                                         font-size: 14px;
                                     }
 
-                                    @media screen and (max-width: 600px) {
-                                        font-size: 11px;
+                                    @media screen and (max-width: 900px) {
+                                        font-size: 13px;
+                                    }
 
-                                        line-height: 20px;
+                                    @media screen and (max-width: 600px) {
+                                        font-size: 12px;
+
+                                        line-height: 17px;
+                                    }
+
+                                    @media screen and (max-width: 400px) {
+                                        font-size: 16px;
+
+                                        line-height: 26px;
                                     }
                                 }
                             }
@@ -305,10 +341,22 @@
     }
 
     &--latest {
+        margin-bottom: 200px;
+        transition: all 500ms linear;
+
+        @media screen and (max-width: 900px) {
+            margin-bottom: 120px;
+        }
+
+        @media screen and (max-width: 400px) {
+            margin-bottom: 60px;
+        }
+
         .late-bloc {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+
             .card {
                 position: relative;
                 width: calc(100% / 4);
@@ -325,6 +373,7 @@
                 @media screen and (max-width: 400px) {
                     width: calc(100% / 1);
                 }
+
                 &__inner {
                     .late-img {
                         img {
@@ -335,7 +384,10 @@
                         }
                     }
                 }
+
                 &__body {
+                    padding: 10px;
+
                     position: absolute;
                     bottom: 11px;
 
@@ -358,11 +410,6 @@
                             font-size: 15px;
                             line-height: 25px;
                         }
-
-                        // @media screen and (max-width: 400px) {
-                        //     font-size: 15px;
-                        //     line-height: 25px;
-                        //  }
                     }
                 }
             }
